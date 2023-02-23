@@ -1,0 +1,158 @@
+body{
+    margin: 0px auto;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    /*background-image: linear-gradient(to right bottom,
+    #020509, #0d2b36, #005159, #00796d, #3ea170);*/
+    /*background-image: linear-gradient(to right bottom, #000,#3ea175);*/
+    background-image: url('image/wallpaperLogin.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.content{
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    background-color:transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+.leftContent{
+    background-color: transparent;
+    width: 100%;
+    height: 600px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.leftContent::before{
+    content: '';
+    display: block;
+    position: absolute;
+    /*background-color: rgba(62, 161, 117,0.3);*/
+    background-color: rgba(20, 20, 20,0.5);
+    top: -450px;
+    left: -480px;
+    height: 800px;
+    width: 800px;
+    z-index: -1;
+    transform: rotate(40deg);
+    border: 2px solid #f9f9f9;
+}
+.leftContent h2{
+    color: #f9f9f9;
+    transform: translate(80px,10px);
+    position: absolute;
+    margin: 0px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 30px;
+}
+.rightContent{
+    background-color: transparent;
+    width: 100%;
+    height: 600px;
+    float: left;
+    position: absolute;
+    overflow: hidden;
+}
+.rightContent::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: black;
+    left: 100px;
+    bottom: -450px;
+    height: 800px;
+    width: 800px;
+    z-index: -1;
+    border: 2px solid #f9f9f9;
+    transform: rotate(40deg);
+}
+.rightContent::after{
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: url('image/logo.png') no-repeat;
+    z-index: 1000;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+
+}
+form{
+    top: 80px;
+    position: absolute;
+    left: 30px;
+    height: 140px;
+    background-color: transparent;
+    width: 250px;
+}
+
+form label i{
+    transform: translateY(8px);
+    font-size: 1.2rem;
+    color: #f9f9f9;
+}
+form input[type=text]{
+    background-color: transparent;
+    font-size: 0.9rem;
+    width: 170px;
+    color: #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #f9f9f9;
+    outline: none;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+form input[type=password]{
+    background-color: transparent;
+    font-size: 1.2rem;
+    width: 170px;
+    color: #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #f9f9f9;
+    outline: none;
+    margin-bottom: 30px;
+}
+form input[type=submit]{
+    transform: translateX(50px);
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #f9f9f9;
+    color: #f9f9f9;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+form input[type=submit]:hover{
+    background-color: #f9f9f9;
+    color: rgba(20, 20, 20,1);
+    border: 1px solid transparent;
+    box-shadow: 2px 2px  #000, 4px 4px #f9f9f9  ;
+}
